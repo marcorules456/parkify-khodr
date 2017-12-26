@@ -1,0 +1,34 @@
+{
+  "name": "parkify-marco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoking13/parkify-marco.git"
+  },
+  "keywords": [
+    "data"
+  ],
+  "author": "marco khodr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcoking13/parkify-marco/issues"
+  },
+  "homepage": "https://github.com/marcoking13/parkify-marco#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
+    "mongojs": "^2.4.1",
+    "mongoose": "^4.13.7",
+    "nodemon": "^1.14.3",
+    "path": "^0.12.7"
+  }
+}
