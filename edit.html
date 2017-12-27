@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
    <meta charset="UTF-8">
@@ -14,9 +13,6 @@
           <link rel="stylesheet" type="text/css" href="assets/css/garage.css">
 </head>
 <body>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
 
   <!-- Modal -->
     <div class="modal-dialog" role="document">
@@ -27,32 +23,28 @@
           </button>
         </div>
         <div class="modal-body">
-          <h3 style="text-align:center">Create Parking Space</h3>
-          <form>
-
-<input class="form-control" style="width:90%;margin-top:5%;float:left"placeholder=" Street Name">
-<input class="form-control" style="width:90%;margin-top:5%;float:left"placeholder=" Street #2">
-<input class="form-control" style="width:30%;margin-top:5%;float:left"placeholder=" City">
-<input class="form-control" style="width:30%;float:left;margin-top:5%"placeholder=" State">
-<input class="form-control" style="width:30%;float:left;margin-top:5%"placeholder=" Zip">
-
-<label  style="width:30%;float:left;">Rate: (per hour)><select class="form-control" id="question01" name="question1"style="float:left;width:50%;"value="$10">
-        <option>$1</option>
-        <option>$2</option>
-        <option>$3</option>
-        <option>$4</option>
-        <option>$5</option>
-        <option>$6</option>
-        <option>$7</option>
-        <option>$8</option>
-        <option>$9</option>
-        <option>$10</option>
-      </select>
-    </label>
-
-          </form>
-
+          <h3 style="text-align:left">Edit Parking Spot</h3>
+<form>
+          <input style="width:100%;margin-top:5%"class="form-control"value=" Airport Parking">
+  <input style="width:100%;margin-top:5%"class="form-control"value=" 123 Street">
+    <input style="width:100%;margin-top:5%"class="form-control">
+  <input style="width:30%;margin-top:5%;float:left"class="form-control"value=" Phoenix">  <input style="width:30%;margin-top:5%;float:left"class="form-control"value=" AZ">  <input style="width:30%;margin-top:5%;float:left"class="form-control"value=" 87363">
+<br>
+      <h5 style="margin-top:10%">Rate(per hour):</h5><select class="form-control" id="question01" name="question1"style="float:left;width:30%;margin-top:4.5%;margin-right:5%;">
+              <option>$1</option>
+              <option>$2</option>
+              <option>$3</option>
+              <option>$4</option>
+              <option>$5</option>
+              <option>$6</option>
+              <option>$7</option>
+              <option>$8</option>
+              <option>$9</option>
+              <option>$10</option>
+            </select>
         </div>
+      </form>
+
         <div class="modal-footer"style="float:left">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           <button type="button" class="btn btn-primary">Create</button>
