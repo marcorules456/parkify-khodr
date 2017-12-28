@@ -17,10 +17,10 @@
 border:green 2px solid;
 }
 .bubble{
-  width:10%;height:10%;border-radius:50%;margin-left:100.5%;border:1px solid black;background:#e6e6e6;position:relative;bottom:10px;padding:1%;
+  width:11%;height:12%;border-radius:50%;margin-left:100.5%;border:1px solid black;background:#e6e6e6;position:relative;bottom:10px;padding:1%;
 }
 .icons{
-  width:90%;height:90%;margin-left:5%;
+  width:100%;height:100%;
 }
 .enlarge{
   width:70%;height:70%;margin-left:19%;
@@ -48,4 +48,7 @@ h4{
 }
 .alerts{
   border:2px solid red;
+}
+.col-xs-3{
+  background:#e6e6e6;
 }
