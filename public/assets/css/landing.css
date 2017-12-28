@@ -15,7 +15,13 @@ color:#e6e6e6;text-align:left;margin-left:5%;
 .rate{
   color:#e6e6e6;text-align:left;margin-left:5%;
 }
-
+ .mr-sm-2{
+   float:left;
+   width:30%;
+ }
+ .invisible{
+   opacity:0;
+ }
 .Empty{
   background:red !important;
 }

@@ -5,7 +5,7 @@
   margin-top:2%;margin-left:5%;
 }
 .creator{
-  border:dashed 2px black;
+  border:dashed 3px black;
 }
 .plus{
   width:50%;margin-left:25%;margin-top:25%;
@@ -25,17 +25,25 @@ border:green 2px solid;
 .enlarge{
   width:70%;height:70%;margin-left:19%;
 }
+
 h4{
   text-align:center;
 }
+
 .info{
   margin-top:10%;
 }
 .detail{
   color:black;margin-bottom:1%;
 }
+option{
+  position:relative;bottom:10px;padding:10px;
+}
 .stat{
   text-align:center;
+}
+.editDescription {
+  width:90%;float:right;height:100px;margin-top:5%;margin-bottom:5%;border:1px solid black;margin-left:5%;float:left;
 }
 body{
   background:#71E6DE;
@@ -48,7 +56,7 @@ body{
   width:3%;
 }
 .modal{
-  margin-top:5%;padding:10%
+  margin-top:5%;width:90%;height:90%;padding:10%;
 }
   .modal-header{
     margin-left:90%;

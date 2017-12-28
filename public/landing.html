@@ -9,18 +9,19 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/landing.css">
 </head>
-<body>
+<body style="background:url('assets/images/street.jpg')">
   <nav class="navbar navbar-default headman">
     <img src="assets/images/p.png"class="logo">
      <h2 class="title" > <strong>arkify</strong> </h2>
-   <form  class="form-inline" >
+   <form  class="form-inline formatter invisible">
      <label  for=""> Email </label>
-    <input  class="form-control mr-sm-2" type="text" placeholder="email" name="username"aria-label="Search">
+    <input  class="form-control mr-sm-2 emails" type="text" placeholder="email"aria-label="Search">
     <div> <label for=""> Password </label> </div>
-    <input  class="form-control mr-sm-2" type="password" placeholder="password" name="password" aria-label="Search">
-    <button type="submit" class="btn btn-primary login"> LogIn </button>
-<button  class="btn btn-success owner"> Owner? </button>
+    <input  class="form-control mr-sm-2 passwords" type="password" placeholder="password"aria-label="Search">
+    <button type="submit" class="btn btn-info login"> Login </button>
   </form>
+  <button  class="btn btn-primary driver"> Driver </button>
+<button  class="btn btn-success owner"> Owner? </button>
   </nav>
 <div class="container">
   <div class="row jumbotron">
@@ -51,4 +52,7 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="assets/js/formatter.js"></script>
 </body>
