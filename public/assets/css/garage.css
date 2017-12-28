@@ -25,11 +25,12 @@ border:green 2px solid;
 .enlarge{
   width:70%;height:70%;margin-left:19%;
 }
-
 h4{
   text-align:center;
 }
-
+nav{
+  position:fixed;
+}
 .info{
   margin-top:10%;
 }
@@ -46,10 +47,10 @@ option{
   width:90%;float:right;height:100px;margin-top:5%;margin-bottom:5%;border:1px solid black;margin-left:5%;float:left;
 }
 body{
-  background:#71E6DE;
+  background:url("../images/street.jpg");
 }
 .container-fluid{
-  width:90%;background:#f2f2f2;
+  width:90%;background:#AFEEEE;padding:5%;
 }
 .profile{
   float:right;

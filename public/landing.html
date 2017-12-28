@@ -13,7 +13,7 @@
   <nav class="navbar navbar-default headman">
     <img src="assets/images/p.png"class="logo">
      <h2 class="title" > <strong>arkify</strong> </h2>
-   <form  class="form-inline formatter invisible">
+   <form  class="form-inline formatter invisible"method="POST"action="/dashboard">
      <label  for=""> Email </label>
     <input  class="form-control mr-sm-2 emails" type="text" placeholder="email"aria-label="Search">
     <div> <label for=""> Password </label> </div>
@@ -21,10 +21,10 @@
     <button type="submit" class="btn btn-info login"> Login </button>
   </form>
   <button  class="btn btn-primary driver"> Driver </button>
-<button  class="btn btn-success owner"> Owner? </button>
+<button  class="btn btn-success owner"> Owner</button>
   </nav>
 <div class="container">
-  <div class="row jumbotron">
+  <div class="row jumbotron brand">
     <div class="col-xs-6">
       <h2 class="sub">Finally find a parking spot the you need  in just seconds</h2>
       <img src="assets/images/phone.ico"class="sublogo">
@@ -42,7 +42,8 @@
           <input type="text" class="form-control infos" id="first" placeholder="First name">
           <input type="text" class="form-control infos info"id="last"  placeholder="Last name">
           <input type="email" class="form-control info" placeholder="Email"class="info">
-          <input type="password" class="form-control info" placeholder="Password"class="info">">
+          <input type="password" class="form-control info" placeholder="Password"class="info">
+          <br>
           <input  type="radio" name="gender" value="male"class="info"> Owner
           <input  type="radio" name="gender" value="female"> Driver
           <br>

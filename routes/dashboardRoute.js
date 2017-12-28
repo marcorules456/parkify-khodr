@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 
 
-app.get("/dashboard",function(req,res){
+app.post("/dashboard",function(req,res){
   res.sendFile(path.resolve(__dirname+"/../public/dashboard.html"));
 });
 
@@ -13,6 +13,7 @@ app.get("/dashboard",function(req,res){
 app.get("/",function(req,res){
   res.sendFile(path.resolve(__dirname+"/../public/landing.html"));
 });
+
 
 
 

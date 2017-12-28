@@ -3,27 +3,348 @@
 <head>
    <meta charset="UTF-8">
    <title> Login </title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+  integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/landing.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+          <link rel="stylesheet" type="text/css" href="assets/css/garage.css">
 </head>
 <body>
-  <nav class="navbar navbar-default header">
+  <nav class="navbar navbar-default headman">
     <img src="assets/images/p.png"class="logo">
-    <h2 class="title"> <strong>Parkify</strong> </h2>
-    <image src="assets/images/profile.png"class="profile"/>
-    <button style="float:right"class="btn btn-success">Logout</button>
+     <h2 class="title" > <strong>arkify</strong> </h2>
+     <img src="assets/images/profile.png"class="profile">
+  <a href="/"  ><button type="submit" class="btn btn-primary login"> Logout </button></a>
   </nav>
-  <div class="container-fluid jumbotron parkingGarage">
-    <div class="row">
-        <button class="btn btn-success menu">Menu</buttton>
-    </div>
-    <br>
-      <div class="row"></div>
+<div class="container-fluid">
+  <div class="modal  fade" id="creating" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="createTitle">Create Parking Space</h3>
+        <form>
+
+<input name="createStreet"class="form-control normal" placeholder=" Street Name">
+<input name="createStreet2"class="form-control normal" placeholder=" Street #2">
+<input name="createCity"class="form-control small" placeholder=" City">
+<input name="createState"class="form-control small" placeholder=" State">
+<input name="createZip"class="form-control small" placeholder=" Zip"style="margin-bottom:5%">
+<label>Rate: (per hour)
+  <select class="form-control normal"name="createRate"style="padding-top:5%">
+      <option>$1</option>
+      <option>$2</option>
+      <option>$3</option>
+      <option>$4</option>
+      <option>$5</option>
+      <option>$6</option>
+      <option>$7</option>
+      <option>$8</option>
+      <option>$9</option>
+      <option>$10</option>
+    </select>
+  </label>
+<h4 class="message">Message:</h4>
+        <input class="editDescription" name="description"placeholder=" Enter description of parking space and other details">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Create</button>
+      </div>
     </div>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/js/app.js"></script>
+</div>
+
+
+  <div class="modal  fade" id="editing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header"style="margin-left:90%">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h3 class="editTitle">Edit Parking Spot</h3>
+<form method="POST">
+
+      <input class="form-control normal" name="editTitle"value=" Airport Parking">
+<input class="form-control normal"name="editStreet"value=" 123 Street">
+<input class="form-control normal"name="editStreet2">
+<input class="form-control small"name="editCity"value=" Phoenix">
+ <input class="form-control small"name="editState"value=" AZ">
+  <input class="form-control small"name="editZip"value=" 87363"style="margin-bottom:5%">
+<br>
+<br>
+  <label>
+      Rate(per hour):
+  <select name="editRate"class="form-control normal" id="question01" name="question1">
+          <option>$1</option>
+          <option>$2</option>
+          <option>$3</option>
+          <option>$4</option>
+          <option>$5</option>
+          <option>$6</option>
+          <option>$7</option>
+          <option>$8</option>
+          <option>$9</option>
+          <option>$10</option>
+        </select>
+
+      </label>
+    </div>
+      <h4 class="message">Message:</h4>
+      <input class="editDescription" value="Location 10 blocks from airport, thrid house from the corner on zappy avennue and 16th street"name="description"placeholder=" Enter description of parking space and other details">
+  </form>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      <button type="button" class="btn btn-primary">Save</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+  <div class="modal  fade" id="enlarging" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>John Doe requested this spot</h3>
+        <div class="ownerside enlargeAddress">
+            <h3 class="parkingspotname">Parking Spot Name</h3>
+                <h3 class="street">Street Name:</h3>
+                <h3 class="street">City,State,Zip</h3>
+        </div>
+        <div class="ownerside enlargeTime">
+            <h3 class="rateEnlarge">Rate:</h3>
+                <h3 class="startTime">Start Time:</h3>
+                <h3 class="endTime">End Time:</h3>
+                  <h3 class="totalTime">Total Time:</h3>
+        </div>
+
+    <div class="driverside enlargeRenter">
+      <h2 class="renterTitle">Renter</h2>
+      <h3 class="renterName">Name</h3>
+      <h3 class="phoneNumber">Phone Number</h3>
+    </div>
+    <div class="driverside enlargeCar">
+      <h2>Vehicle</h2>
+      <h3 class="carInfo">2000 Nissan Maxima Silver</h3>
+      <h3 class-"lisenceInfo">Lisence Plate: ER45JN</h3>
+    </div>
+      </div>
+
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+  <div class="modal  fade" id="alerting" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="bookTitle"><strong>Booking Request:</strong> 555 Yum Ave, AZ,98474</h3>
+
+        <div class="ownerside">
+            <h3><strong>Renter</strong></h3>
+                <h3 class="renterName">John Doe:</h3>
+                <h3 class="renterPhone">123-333-4443</h3>
+        </div>
+        <div class="ownerside">
+          <h2><strong>Vehicle</strong></h2>
+          <h3 class="renterCar">2000 Nissan Maxima Silver</h3>
+          <h3 class="renterLiscence">Lisence Plate: ER45JN</h3>
+        </div>
+  <hr>
+    <div class="ownerside">
+      <h2 class="rateTitle"><strong>Rate:</strong></h2>
+      <h3 class="rateHour">$5/hour</h3>
+      <h3 class="rateTotal">$10 total</h3>
+    </div>
+    <div class="ownerside">
+      <h2><strong>Duration</strong></h2>
+      <h3 class="startTime">Start Time:</h3>
+      <h3 class="endTime">End Time:</h3>
+      <h3 class="totalTime">2 hours</h3>
+    </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-primary">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="mySpot">My Parking Spots</h2>
+<div class="row">
+
+
+
+
+
+
+
+<div class="col-xs-3 space creator"data-toggle="modal" data-target="#creating">
+  <br>
+<h4 class="create">Create a new parking spot</h4>
+<img src="assets/images/plus.png"class="plus"/>
+</div>
+
+
+<div class="col-xs-3 space occupied"data-toggle="modal" data-target="#enlarging">
+  <div class="bubble enlarger">
+  <img src="assets/images/enlarge.png"class="enlarge icons"/>
+</div>
+<h4 class="spaceName">Name of Parking Space</h4>
+<div class="rate info">
+  <p class="dollar detail">Rate:7$/hour</p></div>
+<div class="location info">
+  <p class="detail street">Moonway ave</p>
+    <p class="address">Phoenix,AZ,85230</p>
+</div>
+<div class="status info">
+  <p class="stat detail">Occupied</p>
+</div>
+</div>
+
+
+
+
+
+
+<div class="col-xs-3 space empty">
+  <div class="bubble editor">
+  <img src="assets/images/pensil.png"class="pensil icons"data-toggle="modal" data-target="#editing"/>
+</div>
+<h4 class="spaceName">Name of Parking Space</h4>
+<div class="rate info">
+  <p class="dollar detail">Rate:7$/hour</p></div>
+<div class="location info">
+  <p class="detail street">Moonway ave</p>
+    <p class="address">Phoenix,AZ,85230</p>
+</div>
+<div class="status info">
+  <p class="stat detail">Vacant</p>
+</div>
+</div>
+
+
+<div class="col-xs-3 space alerts">
+  <div class="bubble alerter notif"data-toggle="modal" data-target="#alerting">
+  <img src="assets/images/bell.png"class="bell icons"/>
+</div>
+<h4 class="spaceName">Name of Parking Space</h4>
+<div class="rate info">
+  <p class="dollar detail">Rate:7$/hour</p></div>
+<div class="location info">
+  <p class="detail street">Moonway ave</p>
+    <p class="address">Phoenix,AZ,85230</p>
+</div>
+<div class="status info">
+  <p class="stat detail">Pending</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
