@@ -48,6 +48,24 @@ body{
   background:blue;
     border:blue 1px solid;
 }
+p{
+font-family: 'Mukta Malar', sans-serif;
+}
+h3{
+font-family: 'Mukta Malar', sans-serif;
+}
+h2{
+  font-family: 'Mukta Malar', sans-serif;
+}
+h4{
+font-family: 'Mukta Malar', sans-serif;
+}
+p{
+font-family: 'Mukta Malar', sans-serif;
+}
+h5{
+font-family: 'Mukta Malar', sans-serif;
+}
 .login{
   background:purple;
   border:black 2px solid;

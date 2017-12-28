@@ -96,5 +96,10 @@ body{
 .col-xs-3{
   background:#e6e6e6;
   margin-bottom:5%;
+  padding-bottom:1%;
+
+}
+h5{
+  text-align:left;
 
 }
