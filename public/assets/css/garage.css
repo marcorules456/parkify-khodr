@@ -37,6 +37,37 @@ h4{
 .stat{
   text-align:center;
 }
+body{
+  background:#71E6DE;
+}
+.container-fluid{
+  width:90%;background:#f2f2f2;
+}
+.profile{
+  float:right;
+  width:3%;
+}
+.modal{
+  margin-top:5%;padding:10%
+}
+  .modal-header{
+    margin-left:90%;
+  }
+  .createTitle{
+    text-align:center;
+  }
+  .small{
+    width:30%;margin-top:5%;float:left;
+  }
+  .normal{
+  width:90%;margin-top:5%;float:left;
+  }
+  .ownerside{
+    width:50%;float:left;margin-top:5%;
+  }
+  .driverside{
+    width:50%;float:left;margin-top:5%;border-top:1px solid black;
+  }
 .address{
   color:black;
 }
